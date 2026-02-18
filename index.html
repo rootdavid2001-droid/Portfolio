@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="David - Premium Minecraft Server Developer & Cybersecurity Specialist">
+    <title>David | Portfolio</title>
+
+    <!-- Font Awesome CDN for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ============================================
+         LOADING SCREEN
+         ============================================ -->
+    <div id="loader" class="loader-container">
+        <div class="loader-content">
+            <div class="spinner"></div>
+            <h2 class="loader-text">Loading Profile</h2>
+            <div class="loader-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         BACKGROUND ANIMATION ELEMENTS
+         ============================================ -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Floating Minecraft Blocks Container -->
+    <div id="floating-blocks"></div>
+
+    <!-- Gradient Overlay -->
+    <div class="gradient-overlay"></div>
+
+    <!-- ============================================
+         NAVIGATION
+         ============================================ -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                <span class="logo-text">David</span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#current-work" class="nav-link" data-section="current-work">Current Work</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+         ============================================ -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-greeting reveal-text">
+                <span class="greeting-line"></span>
+                <span class="greeting-text">Hello, I'm</span>
+            </div>
+
+            <h1 class="hero-name reveal-text">
+                <span class="name-main">David</span>
+                <span class="name-glitch" data-text="David">David</span>
+            </h1>
+
+            <div class="hero-subtitle reveal-text">
+                <span class="subtitle-item">
+                    <i class="fas fa-cubes"></i>
+                    Minecraft
+                </span>
+                <span class="subtitle-divider">|</span>
+                <span class="subtitle-item">
+                    <i class="fab fa-discord"></i>
+                    Discord
+                </span>
+                <span class="subtitle-divider">|</span>
+                <span class="subtitle-item">
+                    <i class="fas fa-shield-alt"></i>
+                    Cybersecurity
+                </span>
+            </div>
+
+            <div class="hero-cta reveal-text">
+                <a href="#projects" class="btn btn-primary" id="hero-btn">
+                    <span class="btn-text">View My Work</span>
+                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                    <div class="btn-ripple"></div>
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <span class="btn-text">Get In Touch</span>
+                    <span class="btn-icon"><i class="fas fa-envelope"></i></span>
+                </a>
+            </div>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <span class="scroll-text">Scroll Down</span>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="decoration-block block-1"></div>
+            <div class="decoration-block block-2"></div>
+            <div class="decoration-block block-3"></div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION
+         ============================================ -->
+    <section id="about" class="section about-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">
+                    <span class="title-icon"><i class="fas fa-user"></i></span>
+                    About Me
+                </h2>
+                <div class="title-decoration"></div>
+            </div>
+
+            <div class="about-content">
+                <div class="about-card glass-card reveal-on-scroll">
+                    <div class="about-text">
+                        <p class="about-description">
+                            I'm a passionate developer specializing in <span class="highlight">Minecraft server development</span>,
+                            <span class="highlight">Discord bot development</span>, and <span class="highlight">cybersecurity</span>.
+                            With expertise in creating optimized server infrastructures, automated systems, and secure solutions,
+                            I deliver premium results for clients worldwide.
+                        </p>
+                        <p class="about-description">
+                            My approach combines technical precision with creative problem-solving,
+                            ensuring every project meets the highest standards of quality and performance.
+                        </p>
+                    </div>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="3" data-plus="true">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="30" data-plus="true">0</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="15" data-plus="true">0</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS SECTION
+         ============================================ -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">
+                    <span class="title-icon"><i class="fas fa-code"></i></span>
+                    Skills & Expertise
+                </h2>
+                <div class="title-decoration"></div>
+            </div>
+
+            <div class="skills-grid">
+                <!-- ============================================
+                     SKILL CATEGORY: Minecraft
+                     ============================================ -->
+                <div class="skill-category reveal-on-scroll">
+                    <h3 class="category-title">
+                        <span class="category-icon"><i class="fas fa-cubes"></i></span>
+                        Minecraft
+                    </h3>
+                    <div class="skill-list">
+                        <!-- SKILL ITEM - Copy this block to add more skills -->
+                        <!--
+                        <div class="skill-item" data-level="75">
+                            <div class="skill-info">
+                                <span class="skill-name">Skill Name</span>
+                                <span class="skill-level-text">Expert</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                        -->
+                        <div class="skill-item" data-level="60">
+                            <div class="skill-info">
+                                <span class="skill-name">Server Development</span>
+                                <span class="skill-level-text">Intermediate</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-info">
+                                <span class="skill-name">Config</span>
+                                <span class="skill-level-text">Expert</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="65">
+                            <div class="skill-info">
+                                <span class="skill-name">Skript</span>
+                                <span class="skill-level-text">Intermediate</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="60">
+                            <div class="skill-info">
+                                <span class="skill-name">Server Optimization</span>
+                                <span class="skill-level-text">Intermediate</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                     SKILL CATEGORY: Discord
+                     ============================================ -->
+                <div class="skill-category reveal-on-scroll">
+                    <h3 class="category-title">
+                        <span class="category-icon"><i class="fab fa-discord"></i></span>
+                        Discord
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-info">
+                                <span class="skill-name">Server Development</span>
+                                <span class="skill-level-text">Expert</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="70">
+                            <div class="skill-info">
+                                <span class="skill-name">Bot Development</span>
+                                <span class="skill-level-text">Intermediate</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="95">
+                            <div class="skill-info">
+                                <span class="skill-name">Management</span>
+                                <span class="skill-level-text">Expert</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                     SKILL CATEGORY: Minecraft Plugin Development
+                     ============================================ -->
+                <div class="skill-category reveal-on-scroll">
+                    <h3 class="category-title">
+                        <span class="category-icon"><i class="fas fa-plug"></i></span>
+                        Minecraft Plugin Development
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="40">
+                            <div class="skill-info">
+                                <span class="skill-name">Plugin Development</span>
+                                <span class="skill-level-text">Beginner</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                     SKILL CATEGORY: Web & Apps
+                     ============================================ -->
+                <div class="skill-category reveal-on-scroll">
+                    <h3 class="category-title">
+                        <span class="category-icon"><i class="fas fa-globe"></i></span>
+                        Web & Apps
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="70">
+                            <div class="skill-info">
+                                <span class="skill-name">Web Development</span>
+                                <span class="skill-level-text">Intermediate</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="40">
+                            <div class="skill-info">
+                                <span class="skill-name">App Development</span>
+                                <span class="skill-level-text">Beginner</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============================================
+                     SKILL CATEGORY: Cybersecurity & Scam Investigation
+                     ============================================ -->
+                <div class="skill-category reveal-on-scroll">
+                    <h3 class="category-title">
+                        <span class="category-icon"><i class="fas fa-shield-alt"></i></span>
+                        Cybersecurity & Scam Investigation
+                    </h3>
+                    <div class="skill-list">
+                        <div class="skill-item" data-level="65">
+                            <div class="skill-info">
+                                <span class="skill-name">Linux Understanding</span>
+                                <span class="skill-level-text">Intermediate</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="60">
+                            <div class="skill-info">
+                                <span class="skill-name">Scripting & Automation</span>
+                                <span class="skill-level-text">Intermediate</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="65">
+                            <div class="skill-info">
+                                <span class="skill-name">Bug & Exploit Fix</span>
+                                <span class="skill-level-text">Intermediate</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+
+                        <div class="skill-item" data-level="90">
+                            <div class="skill-info">
+                                <span class="skill-name">Scam Investigation</span>
+                                <span class="skill-level-text">Expert</span>
+                            </div>
+                            <div class="skill-bar-container">
+                                <div class="skill-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CURRENT WORK SECTION
+         ============================================ -->
+    <section id="current-work" class="section current-work-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">
+                    <span class="title-icon"><i class="fas fa-spinner"></i></span>
+                    Currently Working On
+                </h2>
+                <div class="title-decoration"></div>
+            </div>
+
+            <div class="current-work-grid">
+                <!-- ============================================
+                     CURRENT WORK CARD - Copy this block to add more
+                     ============================================ -->
+                <!--
+                <div class="work-card glass-card reveal-on-scroll">
+                    <div class="work-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="work-title">Project Name</h3>
+                    <p class="work-description">Project description goes here.</p>
+                    <div class="work-tags">
+                        <span class="work-tag">Tag 1</span>
+                        <span class="work-tag">Tag 2</span>
+                    </div>
+                </div>
+                -->
+                <!-- Coming Soon Card -->
+                <div class="work-card glass-card coming-soon reveal-on-scroll">
+                    <div class="work-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="work-title">Coming Soon</h3>
+                    <p class="work-description">I'm currently working on exciting projects in Minecraft Bot and Discord bots. Stay tuned for updates!</p>
+                    <div class="work-tags">
+                        <span class="work-tag">In Progress</span>
+                        <span class="work-tag">Minecraft</span>
+                        <span class="work-tag">Discord</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROJECTS SECTION
+     ============================================ -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">
+                    <span class="title-icon"><i class="fas fa-folder"></i></span>
+                    Projects
+                </h2>
+                <div class="title-decoration"></div>
+            </div>
+
+            <div class="projects-grid">
+                <!-- ============================================
+                     PROJECT CARD TEMPLATE - Copy this block to add more projects
+                     ============================================ -->
+                <!--
+                <div class="project-card glass-card reveal-on-scroll">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-image"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Project Name</h3>
+                        <p class="project-description">Project description goes here.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Technology</span>
+                            <span class="project-tag">Stack</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="View Project">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="#" class="project-link" title="View Code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                -->
+
+                <div class="project-card glass-card reveal-on-scroll">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fas fa-cubes"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Minecraft Self Learning Bot</h3>
+                        <p class="project-description">A Minecraft Bot that learns by playing and adapting to the game environment.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">AI</span>
+                            <span class="project-tag">Learning</span>
+                            <span class="project-tag">🕝In Progress</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card glass-card reveal-on-scroll">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Discord Bot Development</h3>
+                        <p class="project-description">Building custom Discord bots with advanced features including automation, moderation tools, and custom integrations.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Bot</span>
+                            <span class="project-tag">Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+     ============================================ -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header reveal-on-scroll">
+                <h2 class="section-title">
+                    <span class="title-icon"><i class="fas fa-envelope"></i></span>
+                    Get In Touch
+                </h2>
+                <div class="title-decoration"></div>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-card glass-card reveal-on-scroll">
+                    <p class="contact-intro">Have a project in mind or want to collaborate? Feel free to reach out through any of these platforms:</p>
+
+                    <div class="contact-methods">
+                        <!-- ============================================
+                             CONTACT METHOD - Copy this block to add more
+                             ============================================ -->
+                        <!--
+                        <a href="#" class="contact-method" target="_blank" rel="noopener noreferrer">
+                            <div class="method-icon">
+                                <i class="fab fa-icon-name"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Platform Name</span>
+                                <span class="method-value">username</span>
+                            </div>
+                            <div class="method-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        -->
+
+                        <!-- Discord -->
+                        <a href="https://discord.gg/3sKVvRD5dR  " class="contact-method" target="_blank" rel="noopener noreferrer">
+                            <div class="method-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Discord</span>
+                            </div>
+                            <div class="method-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/rootdavid11" class="contact-method" target="_blank" rel="noopener noreferrer">
+                            <div class="method-icon">
+                                <i class="fab fa-instagram"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Instagram</span>
+                            </div>
+                            <div class="method-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:rootdavid2001@gmail.com" class="contact-method">
+                            <div class="method-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="method-info">
+                                <span class="method-label">Email</span>
+                            </div>
+                            <div class="method-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+     ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-cube"></i></span>
+                    <span class="logo-text">David</span>
+                </div>
+
+                <div class="footer-social">
+                    <a href="https://discord.gg/rootdavid" class="social-link" target="_blank" rel="noopener noreferrer" title="Discord">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="https://instagram.com/rootdavid11" class="social-link" target="_blank" rel="noopener noreferrer" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="mailto:rootdavid2001@gmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">
+                    &copy; 2025 David. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ============================================
+         JAVASCRIPT
+     ============================================ -->
+    <script src="script.js"></script>
+</body>
+</html>
